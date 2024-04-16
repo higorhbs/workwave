@@ -1,0 +1,41 @@
+
+@font-face {
+    font-family: 'titulo';
+    src: url('../resources/fonts/Montserrat-Medium.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'subtitulo';
+    src: url('../resources/fonts/Montserrat-Light.ttf') format('truetype');
+  }
+
+
+.logo {
+    margin: 140px auto 0;
+    width: 200px;
+    height: 110px;
+  }
+.nomeapp {
+    font-family: 'titulo';
+    font-size: 40px;
+    margin: 0 auto;
+    color: black;
+    text-align: center;
+    margin: 0;
+    height: 30px;
+}
+.subtitulo{
+    padding-top: 15px;
+    margin: 0;
+    color:#89CFF0;
+    text-align: center;
+    height: 40px;
+    font-size: 30px;
+    font-family: 'subtitulo';
+}
+.eslogan{
+    background-color: bisque;
+    margin: 0;
+    color: black;
+    height: 100px;
+    text-align: center;
+}
