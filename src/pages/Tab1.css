@@ -8,7 +8,6 @@
     src: url('../resources/fonts/Montserrat-Light.ttf') format('truetype');
   }
 
-
 .logo {
     margin: 140px auto 0;
     width: 200px;
@@ -33,9 +32,46 @@
     font-family: 'subtitulo';
 }
 .eslogan{
-    background-color: bisque;
     margin: 0;
     color: black;
-    height: 100px;
+    font-family: 'subtitulo';
     text-align: center;
+}
+
+.botlogin {
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 10px;
+}
+
+.login{
+  font-family: 'titulo';
+  display: flex;
+  margin: 0 auto 5px; 
+  width: 60%;
+}
+.criar {
+  font-family: 'subtitulo'; /* Alterei a fonte para 'subtitulo' */
+  display: flex;
+  margin: -40px auto 0; /* Ajustei a margem superior para -20px para subir o botão */
+  width: 45%;
+}
+.caixa{
+  
+  height: 5%;
+}
+.login, .criar {
+  font-family: 'titulo';
+  display: block;
+  margin: 0 auto 5px; 
+  margin-bottom: 70px;
+  width: 60%; 
+}
+.caixa {
+  font-family: 'titulo'; 
+  height: 30px; /* Alterei a altura para 50px para garantir que os itens de entrada de texto tenham espaço suficiente */
+}
+.loginuser {
+  margin: 0 auto; /* Centralizar horizontalmente */
+  padding: 40px; /* Adicionar preenchimento */
 }
