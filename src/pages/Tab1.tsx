@@ -49,23 +49,23 @@ const LoginPage: React.FC<{ setShowLoginPage: (show: boolean) => void }> = ({ se
   };
 
   return (
-    <IonContent className='loginuser'>
-      <div className="botlogin">
-        <IonList>
-          <IonItem>
-            <IonLabel className='caixa' position="floating" >Nome de usuário</IonLabel>
-            <IonInput type="text" value={username} onIonChange={e => setUsername(e.detail.value!)}></IonInput>
-          </IonItem>
-          <IonItem>
-            <IonLabel className='caixa' position="floating">Senha</IonLabel>
-            <IonInput type="password" value={password} onIonChange={e => setPassword(e.detail.value!)}></IonInput>
-          </IonItem>
-        </IonList>
-      </div>
-      <div className="botlogin">
-        <IonButton className='login' expand="block" onClick={handleLogin}>Login</IonButton>
-        <IonButton className='criar' type="submit">Criar conta</IonButton>
-      </div>
+    <IonContent className='teste'>
+    <div className="botlogin" style={{ borderRadius: '10px', overflow: 'hidden' }}>
+    <IonList>
+      <IonItem>
+        <IonLabel className='caixa' position="floating" >Nome de usuário</IonLabel>
+        <IonInput type="text" value={username} onIonChange={e => setUsername(e.detail.value!)}></IonInput>
+      </IonItem>
+      <IonItem>
+        <IonLabel className='caixa' position="floating">Senha</IonLabel>
+        <IonInput type="password" value={password} onIonChange={e => setPassword(e.detail.value!)}></IonInput>
+      </IonItem>
+    </IonList>
+  </div>
+  <div className="botlogin">
+    <IonButton className='login' expand="block" onClick={handleLogin}>Login</IonButton>
+    <IonButton className='criar' type="submit">Criar conta</IonButton>
+  </div>
     </IonContent>
   );
 };

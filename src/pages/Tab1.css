@@ -17,17 +17,16 @@
     font-family: 'titulo';
     font-size: 40px;
     margin: 0 auto;
-    color: black;
+    color: #afccff;
     text-align: center;
     margin: 0;
     height: 30px;
 }
 .subtitulo{
-    padding-top: 15px;
+    padding-top: 0;
     margin: 0;
-    color:#89CFF0;
+    color:#afccff;
     text-align: center;
-    height: 40px;
     font-size: 30px;
     font-family: 'subtitulo';
 }
@@ -38,29 +37,18 @@
     text-align: center;
 }
 
-.botlogin {
-  margin: 0 auto;
-  width: 70%;
-  margin-top: 10px;
-}
-
 .login{
   font-family: 'titulo';
   display: flex;
   margin: 0 auto 5px; 
   width: 60%;
 }
-.criar {
-  font-family: 'subtitulo'; /* Alterei a fonte para 'subtitulo' */
-  display: flex;
-  margin: -40px auto 0; /* Ajustei a margem superior para -20px para subir o botão */
-  width: 45%;
-}
+
 .caixa{
   
   height: 5%;
 }
-.login, .criar {
+.criar {
   font-family: 'titulo';
   display: block;
   margin: 0 auto 5px; 
@@ -69,9 +57,30 @@
 }
 .caixa {
   font-family: 'titulo'; 
+  border-radius: 16px;
   height: 30px; /* Alterei a altura para 50px para garantir que os itens de entrada de texto tenham espaço suficiente */
 }
 .loginuser {
   margin: 0 auto; /* Centralizar horizontalmente */
   padding: 40px; /* Adicionar preenchimento */
+  height: 40%;
+}
+
+.botlogin {
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 10px;
+  height: 40%;
+}
+
+.ios body{
+  margin: 0 auto;
+}
+.inner-scroll{
+  margin: 0 auto;
+  height: 40%;
+}
+
+.teste{
+  background-color: red;
 }
