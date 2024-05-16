@@ -11,8 +11,11 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
+import Home from './pages/Home';
 import Tab2 from './pages/Tab2';
+import Criarconta from './pages/Criarconta'
+
+
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -40,19 +43,21 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/tab1">
-          <Tab1 />
+        <Route exact path="/Home">
+          <Home />
         </Route>
         <Route exact path="/tab2">
           <Tab2 />
         </Route>
+        <Route exact path="/Criarconta"> {/* Adicione a rota para CriarConta */}
+          <Criarconta />
+        </Route>
         <Route exact path="/">
-          <Redirect to="/tab1" />
+          <Redirect to="/Home" />
         </Route>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
 );
-
 
 export default App;

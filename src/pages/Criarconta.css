@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'titulo';
+    src: url('../resources/fonts/Montserrat-Medium.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'subtitulo';
+    src: url('../resources/fonts/Montserrat-Light.ttf') format('truetype');
+  }
+
+.inicial{
+    font-size: 30px;
+}
+  .inputs {
+    font-family: 'titulo';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define a altura para ocupar toda a altura da tela */
+  }
+  
+  .inputs form {
+    width: 300px; /* Define a largura do formulário */
+  }
+  
+  .inputs label, .inputs input, .inputs button {
+    margin-bottom: 30px;
+     /* Adiciona margem inferior entre os elementos */
+  }
+  
+  .inputs button {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px; 
+    border-radius: 10px; 
+  }
+  
+  .inputs input {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px; 
+    border-radius: 10px; 
+  }
