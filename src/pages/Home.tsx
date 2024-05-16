@@ -27,6 +27,7 @@ const YourComponent: React.FC = () => {
         Ondas de facilidade e conveniência <br></br>ao alcance das suas mãos!
       </div>
       <IonButton className='criar' type="submit" onClick={handleClick}>Entrar</IonButton>
+      <IonButton className='criar' type="submit" onClick={handleClick}>Criar conta</IonButton>
     </IonPage>
   );
 };

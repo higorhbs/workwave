@@ -14,6 +14,7 @@ import { ellipse, square, triangle } from 'ionicons/icons';
 import Home from './pages/Home';
 import Tab2 from './pages/Tab2';
 import Criarconta from './pages/Criarconta'
+import Esqueci from './pages/Esqueci'
 
 
 
@@ -51,6 +52,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/Criarconta"> {/* Adicione a rota para CriarConta */}
           <Criarconta />
+        </Route>
+        <Route exact path="/Esqueci"> {/* Adicione a rota para CriarConta */}
+          <Esqueci/>
         </Route>
         <Route exact path="/">
           <Redirect to="/Home" />
