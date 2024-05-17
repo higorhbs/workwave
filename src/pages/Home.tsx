@@ -7,7 +7,7 @@ const YourComponent: React.FC = () => {
   const history = useHistory(); // Inicialize o useHistory hook
 
   const handleClick = () => {
-    history.push('/Criarconta');
+    history.push('/Esqueci');
   };
 
   return (

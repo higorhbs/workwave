@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { IonPage, IonContent, IonHeader, IonToolbar, IonTitle, IonButton, IonInput, IonItem, IonLabel } from '@ionic/react';
 import { useHistory } from 'react-router-dom'; // Importe o hook useHistory
-import './Criarconta.css';
+import './Esqueci.css';
 
 const Esqueci: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -21,27 +22,44 @@ const Esqueci: React.FC = () => {
   };
 
   const handleClick = () => {
-    history.push('/Esqueci');
+    history.push('/Criarconta');
   };
 
   return (
-    <div>
-      <h2 className='Inicial'>Esqueci Minha Senha</h2>
-      <p>Problemas para fazer o login?</p>
-      <p>Digite seu email e enviaremos um link para redefinir sua senha.</p>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="email">E-mail:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <button type="submit">Enviar</button>
-      </form>
-      {mensagem && <div>{mensagem}</div>}
-    </div>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Esqueci minha senha</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent className="ion-padding">
+        <div className="logo2">
+          <img src="./resources/Escudo.png" alt="Logo" className='logo2' />
+        </div>
+        <div className='subtitulo2'>
+
+          <p>Problemas para fazer o login?</p>
+          <p>Digite seu email e enviaremos um link para redefinir sua senha.</p>
+
+        </div>
+
+        <form onSubmit={handleSubmit} className='form-container'>
+          <IonItem className="custom-input">
+            <IonLabel position="floating" >E-mail</IonLabel>
+            <IonInput
+              type="email"
+              value={email}
+              onIonChange={(e) => setEmail(e.detail.value!)}
+              required
+            />
+          </IonItem>
+
+          <IonButton type="submit" expand="block" style={{ marginBottom: '10px' }}>Enviar</IonButton>
+        </form>
+        {mensagem && <div>{mensagem}</div>}
+        <IonButton onClick={handleClick} expand="block" >Criar conta</IonButton>
+      </IonContent>
+    </IonPage>
   );
 };
 

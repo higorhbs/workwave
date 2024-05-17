@@ -50,10 +50,10 @@ const App: React.FC = () => (
         <Route exact path="/tab2">
           <Tab2 />
         </Route>
-        <Route exact path="/Criarconta"> {/* Adicione a rota para CriarConta */}
+        <Route exact path="/Criarconta">
           <Criarconta />
         </Route>
-        <Route exact path="/Esqueci"> {/* Adicione a rota para CriarConta */}
+        <Route exact path="/Esqueci">
           <Esqueci/>
         </Route>
         <Route exact path="/">

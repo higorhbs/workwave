@@ -56,9 +56,12 @@
   width: 60%; 
 }
 .caixa {
+  padding: 10px; 
+  border-radius: 10px; 
+  margin: 0 auto 5px; 
   font-family: 'titulo'; 
-  border-radius: 16px;
-  height: 30px; /* Alterei a altura para 50px para garantir que os itens de entrada de texto tenham espaço suficiente */
+  display: flex;
+  height: 0px; /* Alterei a altura para 50px para garantir que os itens de entrada de texto tenham espaço suficiente */
 }
 .loginuser {
   margin: 0 auto; /* Centralizar horizontalmente */
