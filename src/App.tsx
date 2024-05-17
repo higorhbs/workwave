@@ -15,6 +15,7 @@ import Home from './pages/Home';
 import Tab2 from './pages/Tab2';
 import Criarconta from './pages/Criarconta'
 import Esqueci from './pages/Esqueci'
+import Login from './pages/Login'
 
 
 
@@ -55,6 +56,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/Esqueci">
           <Esqueci/>
+        </Route>
+        <Route exact path="/Login">
+          <Login/>
         </Route>
         <Route exact path="/">
           <Redirect to="/Home" />
