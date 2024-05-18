@@ -1,8 +1,18 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './formInput.css';
 import { IonImg } from '@ionic/react';
 
-const FormInput: React.FC = () => {
+interface FormInputProps {
+  username: string;
+  password: string;
+  errorMessage: string;
+  setUsername: (username: string) => void;
+  setPassword: (password: string) => void;
+  handleSubmit: (event: React.FormEvent) => void;
+}
+
+const FormInput: React.FC<FormInputProps> = ({ username, password, errorMessage, setUsername, setPassword, handleSubmit }) => {
   return (
     <div className='container'>
       <div className='formImg'>
@@ -11,21 +21,27 @@ const FormInput: React.FC = () => {
 
       <h2 className='title'>WORKWAVE</h2>
 
-      <form action="" className='form'>
+      <form onSubmit={handleSubmit} className='form'>
         <input
           placeholder='Nome de Usuário'
           type="text"
           id="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
         />
 
         <input
           placeholder='Senha'
           type="password"
           id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
+        {errorMessage && <p className="error">{errorMessage}</p>}
+
         <Link to="/Esqueci" className='btn1'>Esqueci minha senha</Link>
-        <button className='criar' type="submit">Entrar</button>        
+        <button className='criar' type="submit">Entrar</button>
       </form>
     </div>
   );

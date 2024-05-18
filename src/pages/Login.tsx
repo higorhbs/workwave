@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonPage, IonImg, IonInput } from '@ionic/react';
+import { IonPage } from '@ionic/react';
 import { useHistory } from 'react-router-dom'; // Importe o hook useHistory
 import './Criarconta.css';
 import FormInput from '../components/formInput/formInput';
@@ -18,58 +18,26 @@ const SignUpPage: React.FC = () => {
     } else {
       console.log('Usuário:', username);
       console.log('Senha:', password);
-      ;
       setUsername('');
       setPassword('');
+      setErrorMessage('');
 
-      history.push('/Esqueci');
+      history.push('/solicitaservico');
     }
   };
 
   return (
     <IonPage style={{ backgroundColor: '#7974ff' }}>
-
-      {/* <div className="ion-padding">
-        <div className="logo">
-          <IonImg src="./resources/icone.png"></IonImg>
-        </div>
-      </div>
-      <div className="nomeapp">
-        WORKWAVE
-      </div>
-      <div className="inputs">
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="username"></label>
-          <input
-            placeholder='Nome de Usuário'
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          /><br />
-
-          <label htmlFor="password"></label>
-          <input
-            placeholder='Senha'
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          /><br />
-
-          <button className='criar' type="submit">Esqueci minha senha</button>
-          <button className='criar' type="submit">Entrar!</button>
-        </form>
-
-        {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
-      </div> */}
-
-      <FormInput />
+      <FormInput
+        username={username}
+        password={password}
+        errorMessage={errorMessage}
+        setUsername={setUsername}
+        setPassword={setPassword}
+        handleSubmit={handleSubmit}
+      />
     </IonPage>
   );
 };
 
 export default SignUpPage;
-
