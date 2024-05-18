@@ -12,7 +12,10 @@ interface FormInputProps {
   handleSubmit: (event: React.FormEvent) => void;
 }
 
+
 const FormInput: React.FC<FormInputProps> = ({ username, password, errorMessage, setUsername, setPassword, handleSubmit }) => {
+
+  
   return (
     <div className='container'>
       <div className='formImg'>
@@ -27,6 +30,7 @@ const FormInput: React.FC<FormInputProps> = ({ username, password, errorMessage,
           type="text"
           id="username"
           value={username}
+          required
           onChange={(e) => setUsername(e.target.value)}
         />
 
@@ -35,6 +39,7 @@ const FormInput: React.FC<FormInputProps> = ({ username, password, errorMessage,
           type="password"
           id="password"
           value={password}
+          required
           onChange={(e) => setPassword(e.target.value)}
         />
 

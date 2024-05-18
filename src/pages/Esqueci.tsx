@@ -22,7 +22,7 @@ const Esqueci: React.FC = () => {
   };
 
   const handleClick = () => {
-    history.push('/Criarconta');
+    history.push('/login');
   };
 
   return (
@@ -54,10 +54,10 @@ const Esqueci: React.FC = () => {
             />
           </IonItem>
 
-          <IonButton type="submit" expand="block" style={{ marginBottom: '10px' }}>Enviar</IonButton>
+          <IonButton className='customButton' type="submit" expand="block" style={{ marginBottom: '10px' }}>Enviar</IonButton>
         </form>
         {mensagem && <div>{mensagem}</div>}
-        <IonButton onClick={handleClick} expand="block" >Criar conta</IonButton>
+        <IonButton onClick={handleClick} expand="block" className='customButton' type="submit" >Voltar</IonButton>
       </IonContent>
     </IonPage>
   );

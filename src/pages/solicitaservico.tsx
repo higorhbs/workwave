@@ -109,7 +109,7 @@ const ServiceRequestScreen: React.FC = () => {
             </IonItem>
             </div>
             <IonLabel>AQUI FICARÁ O MAPA</IonLabel> <br />
-            <IonButton className='criar' type="submit">Solicitar</IonButton>
+            <IonButton className='custom-input' type="submit">Solicitar</IonButton>
             </div>
             
           </form>

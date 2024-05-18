@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IonPage } from '@ionic/react';
-import { useHistory } from 'react-router-dom'; // Importe o hook useHistory
+import { useHistory } from 'react-router-dom';
 import './Criarconta.css';
 import FormInput from '../components/formInput/formInput';
 
@@ -8,7 +8,7 @@ const SignUpPage: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  const history = useHistory(); // Obtenha o objeto history usando o hook useHistory
+  const history = useHistory();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();

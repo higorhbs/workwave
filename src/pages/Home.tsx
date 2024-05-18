@@ -10,9 +10,7 @@ const YourComponent: React.FC = () => {
     history.push('/login'); // Redireciona para a tela de login
   };
 
-  const handleClickCriarConta = () => {
-    history.push('/Criarconta'); // Redireciona para a tela de criar conta
-  };
+
 
   return (
     <IonPage style={{ backgroundColor: 'white' }}>
@@ -31,8 +29,7 @@ const YourComponent: React.FC = () => {
         Ondas de facilidade e conveniência <br></br>ao alcance das suas mãos!
       </div>
 
-      <IonButton className='criar' type="button" onClick={handleClickEntrar}>Entrar</IonButton>
-      <IonButton className='criar' type="button" onClick={handleClickCriarConta}>Criar conta</IonButton>
+      <IonButton className='customButton' type="submit" onClick={handleClickEntrar}>Entrar</IonButton>
     </IonPage>
   );
 };

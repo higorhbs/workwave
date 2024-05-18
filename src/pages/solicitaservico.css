@@ -23,3 +23,13 @@
 .custom-input-wrapper{
     overflow: visible;
 }
+
+.custom-input{
+    font-family: 'titulo';
+    color: white;
+    margin-bottom: 250px;
+    width: 90%;
+    margin-left: 5%;
+    transition-duration: 500ms;
+    font-weight: bold;
+}
