@@ -42,7 +42,7 @@ const Esqueci: React.FC = () => {
           <p>Digite seu email e enviaremos um link para redefinir sua senha.</p>
 
         </div>
-
+        {mensagem && <div className='enviomsg'>{mensagem}</div>}
         <form onSubmit={handleSubmit} className='form-container'>
           <IonItem className="custom-input">
             <IonLabel position="floating" >E-mail</IonLabel>
@@ -56,7 +56,7 @@ const Esqueci: React.FC = () => {
 
           <IonButton className='customButton' type="submit" expand="block" style={{ marginBottom: '10px' }}>Enviar</IonButton>
         </form>
-        {mensagem && <div>{mensagem}</div>}
+
         <IonButton onClick={handleClick} expand="block" className='customButton' type="submit" >Voltar</IonButton>
       </IonContent>
     </IonPage>
