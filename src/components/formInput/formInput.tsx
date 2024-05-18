@@ -15,7 +15,7 @@ interface FormInputProps {
 
 const FormInput: React.FC<FormInputProps> = ({ username, password, errorMessage, setUsername, setPassword, handleSubmit }) => {
 
-  
+
   return (
     <div className='container'>
       <div className='formImg'>
@@ -46,7 +46,9 @@ const FormInput: React.FC<FormInputProps> = ({ username, password, errorMessage,
         {errorMessage && <p className="error">{errorMessage}</p>}
 
         <Link to="/Esqueci" className='btn1'>Esqueci minha senha</Link>
+
         <button className='criar' type="submit">Entrar</button>
+        
         <Link to="/Criarconta">
           <button className='criar' type="button">Criar conta</button>
         </Link>
