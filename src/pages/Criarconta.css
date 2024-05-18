@@ -7,6 +7,9 @@
     src: url('../resources/fonts/Montserrat-Light.ttf') format('truetype');
   }
 
+.logo{
+margin-bottom: 40px;
+}
 .inicial{
     font-size: 30px;
 }

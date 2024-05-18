@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonPage, IonImg, IonInput } from '@ionic/react';
+import { IonPage, IonImg, IonInput, IonButton } from '@ionic/react';
 import { useHistory } from 'react-router-dom'; // Importe o hook useHistory
 import './Criarconta.css';
 
@@ -30,8 +30,12 @@ const SignUpPage: React.FC = () => {
       alert('Conta criada com sucesso!');
 
       // Navegar para a página Esqueci após criar a conta
-      history.push('/Esqueci');
+      history.push('./solicitaservico');
     }
+  };
+
+  const handleGoBack = () => {
+    history.goBack(); // Voltar para a página anterior
   };
 
   return (
@@ -84,7 +88,7 @@ const SignUpPage: React.FC = () => {
             required
           /><br />
 
-          <button className='criar' type="submit">Criar!</button>
+          <IonButton className='customButton' type="submit">Criar Conta</IonButton>
         </form>
 
         {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
@@ -94,4 +98,3 @@ const SignUpPage: React.FC = () => {
 };
 
 export default SignUpPage;
-

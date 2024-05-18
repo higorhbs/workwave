@@ -47,6 +47,9 @@ const FormInput: React.FC<FormInputProps> = ({ username, password, errorMessage,
 
         <Link to="/Esqueci" className='btn1'>Esqueci minha senha</Link>
         <button className='criar' type="submit">Entrar</button>
+        <Link to="/Criarconta">
+          <button className='criar' type="button">Criar conta</button>
+        </Link>
       </form>
     </div>
   );

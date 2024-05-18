@@ -30,6 +30,7 @@ const YourComponent: React.FC = () => {
       </div>
 
       <IonButton className='customButton' type="submit" onClick={handleClickEntrar}>Entrar</IonButton>
+      
     </IonPage>
   );
 };
