@@ -4,6 +4,8 @@ import {
   IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar 
 } from '@ionic/react';
 import './solicitaservico.css';
+import { GoogleMap } from '@capacitor/google-maps';
+import { useRef } from 'react';
 
 const ServiceRequestScreen: React.FC = () => {
   const [name, setName] = useState('');
@@ -11,6 +13,25 @@ const ServiceRequestScreen: React.FC = () => {
   const [descricao, setDescription] = useState('');
   const [urgencia, setUrgency] = useState('normal');
   const [tiposServicos, setAdditionalServices] = useState<string[]>([]);
+  const mapRef = useRef<HTMLElement>();
+  let newMap: GoogleMap;
+
+  async function createMap() {
+    if (!mapRef.current) return;
+
+    newMap = await GoogleMap.create({
+      id: 'my-cool-map',
+      element: mapRef.current,
+      apiKey: "AIzaSyAyKVlZzBynLNNlD2uSvJ4y5qK5e3oUKYg",
+      config: {
+        center: {
+          lat: -19.9167,
+          lng: -43.9333
+        },
+        zoom: 8
+      }
+    })
+  }
 
   const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
@@ -24,7 +45,6 @@ const ServiceRequestScreen: React.FC = () => {
 
     console.log('Request submitted:', request);
 
-    // API VAI AQUI
   };
 
   const handleUrgencyChange = (event: CustomEvent) => {
@@ -108,7 +128,15 @@ const ServiceRequestScreen: React.FC = () => {
               ))}
             </IonItem>
             </div>
-            <IonLabel>AQUI FICARÁ O MAPA</IonLabel> <br />
+            <div className="component-wrapper">
+      <capacitor-google-map ref={mapRef} style={{
+        display: 'inline-block',
+        width: 400,
+        height: 400
+      }}></capacitor-google-map>
+
+      <IonButton className='input' onClick={createMap}>Minha localização</IonButton>
+    </div> <br />
             <IonButton className='custom-input' type="submit">Solicitar</IonButton>
             </div>
             
